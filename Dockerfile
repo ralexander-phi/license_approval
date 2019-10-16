@@ -6,5 +6,5 @@ WORKDIR /usr/src/app
 
 COPY . .
 
-CMD ["script.sh"]
+ENTRYPOINT ["script.sh"]
 
