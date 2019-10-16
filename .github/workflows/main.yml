@@ -5,6 +5,12 @@ on:
     - 'Gemfile.lock'
     - '*.gemspec'
     - 'docs/dependency_decisions.yml'
+  pull_request:
+    paths: 
+    - 'Gemfile'
+    - 'Gemfile.lock'
+    - '*.gemspec'
+    - 'docs/dependency_decisions.yml'
 
 jobs:
   license_check:
