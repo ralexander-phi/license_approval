@@ -4,7 +4,6 @@ on:
     - master
   pull_request:
 
-
 jobs:
   license_check:
     runs-on: ubuntu-latest
