@@ -3,7 +3,8 @@ on:
     paths: 
     - 'Gemfile'
     - 'Gemfile.lock'
-    - 'doc/dependency_decisions.yml'
+    - '*.gemspec'
+    - 'docs/dependency_decisions.yml'
 
 jobs:
   license_check:
