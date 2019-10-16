@@ -4,11 +4,13 @@ GEM
     license_finder (5.10.2)
       bundler
       rubyzip
+      thor
       toml (= 0.2.0)
       with_env (= 1.1.0)
       xml-simple
     parslet (1.8.2)
     rubyzip (2.0.0)
+    thor (0.20.3)
     toml (0.2.0)
       parslet (~> 1.8.0)
     with_env (1.1.0)
