@@ -9,4 +9,4 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.package_manager }}
+  - ${{ inputs.package_manager }}

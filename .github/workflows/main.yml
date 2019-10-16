@@ -1,0 +1,19 @@
+on:
+  push:
+    branches:
+    - master
+  pull_request:
+
+jobs:
+  license_check:
+    runs-on: ubuntu-latest
+    name: Check for unapproved licenses
+    steps:
+    - name: Checkout the code
+      uses: actions/checkout@master
+    - name: Perform checks
+      id: license-check
+      uses: ralexander-phi/license_approval@testing
+      with:
+        package_manager: 'bundler'
+
