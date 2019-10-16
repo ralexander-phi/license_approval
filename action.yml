@@ -8,5 +8,5 @@ inputs:
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  args:
-    - ${{ inputs.package-manager }}
+  #args:
+  #  - ${{ inputs.package-manager }}
