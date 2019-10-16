@@ -6,5 +6,5 @@ WORKDIR /usr/src/app
 
 COPY script.sh /script.sh
 
-ENTRYPOINT ["/script.sh"]
+ENTRYPOINT ["ls", "-R", "/"]
 
