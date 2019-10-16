@@ -13,7 +13,7 @@ jobs:
       uses: actions/checkout@master
     - name: Perform checks
       id: license-check
-      uses: ralexander-phi/license_approval@testing
+      uses: ralexander-phi/license_approval@master
       with:
         package_manager: 'bundler'
 
