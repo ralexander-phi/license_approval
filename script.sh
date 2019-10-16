@@ -2,6 +2,8 @@
 
 cd "$GITHUB_WORKSPACE"
 
+echo "$INPUT_PACKAGE_MANAGER"
+
 # need to install dependencies
 bundle
 

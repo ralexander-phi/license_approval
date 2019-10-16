@@ -15,5 +15,5 @@ jobs:
       id: license-check
       uses: ralexander-phi/license_approval@testing
       with:
-        package_manager: 'bundler'
+        package-manager: 'bundler'
 

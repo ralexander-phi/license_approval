@@ -1,7 +1,7 @@
 name: 'License Approval'
 description: 'Check if any license in use require approval'
 inputs:
-  package-manager:
+  package_manager:
     description: 'Which package manager to check'
     required: true
     default: 'bundler'
@@ -9,4 +9,4 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-  - ${{ inputs.package-manager }}
+  - ${{ inputs.package_manager }}
