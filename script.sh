@@ -7,7 +7,8 @@ ls -R
 
 bundle
 
-gem install license_finder
+# moved to Dockerfile
+#gem install license_finder
 
 license_finder
 
