@@ -1,7 +1,7 @@
 FROM ruby:2.6-alpine
 
-COPY Gemfile /Gemfile
-RUN bundle install --system --gemfile /Gemfile
+COPY Gemfile.lock /Gemfile.lock
+RUN bundle install --system --gemfile /Gemfile.lock
 
 COPY script.sh /script.sh
 
