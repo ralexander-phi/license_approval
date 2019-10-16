@@ -3,6 +3,7 @@ on:
     paths: 
     - 'Gemfile'
     - 'Gemfile.lock'
+    - 'doc/dependency_decisions.yml'
 
 jobs:
   license_check:
