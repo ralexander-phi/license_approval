@@ -1,0 +1,19 @@
+#!/bin/bash
+
+echo "$HOME"
+echo "$GITHUB_REF"
+echo "$GITHUB_SHA"
+echo "$GITHUB_REPOSITORY"
+echo "$GITHUB_ACTOR"
+echo "$GITHUB_WORKFLOW"
+echo "$GITHUB_HEAD_REF"
+echo "$GITHUB_BASE_REF"
+echo "$GITHUB_EVENT_NAME"
+echo "$GITHUB_WORKSPACE"
+echo "$GITHUB_ACTION"
+echo "$GITHUB_EVENT_PATH"
+echo "$RUNNER_OS"
+echo "$RUNNER_TOOL_CACHE"
+echo "$RUNNER_TEMP"
+echo "$RUNNER_WORKSPACE"
+
