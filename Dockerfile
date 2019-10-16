@@ -1,6 +1,7 @@
 FROM ruby:2.6-alpine
 
-RUN gem install license_finder
+COPY Gemfile /Gemfile
+RUN bundle install --system --gemfile /Gemfile
 
 COPY script.sh /script.sh
 
