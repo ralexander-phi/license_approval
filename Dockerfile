@@ -4,7 +4,7 @@ RUN apk add build-base binutils git openssh-client
 
 WORKDIR /usr/src/app
 
-COPY . .
+COPY script.sh /script.sh
 
-ENTRYPOINT ["script.sh"]
+ENTRYPOINT ["/script.sh"]
 
