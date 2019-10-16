@@ -1,5 +1,5 @@
 on:
-  pull_request:
+  push:
     paths: 
     - 'Gemfile'
     - 'Gemfile.lock'
