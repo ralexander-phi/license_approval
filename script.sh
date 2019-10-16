@@ -1,11 +1,13 @@
 #!/bin/sh
 
-cd "$HOME"
+cd "$GITHUB_WORKSPACE"
 
 pwd
 ls -R
 
 bundle
 
-find_license
+gem install license_finder
+
+license_finder
 
