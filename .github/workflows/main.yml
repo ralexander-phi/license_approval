@@ -1,10 +1,4 @@
-on:
-  push:
-    paths: 
-    - 'Gemfile'
-    - 'Gemfile.lock'
-    - '*.gemspec'
-    - 'docs/dependency_decisions.yml'
+on: [push, pull_request]
 
 jobs:
   license_check:
