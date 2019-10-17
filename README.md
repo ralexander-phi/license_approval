@@ -10,6 +10,8 @@ How it works:
 * Your team can review the license or consult with your legal team to determine if the license is acceptable
 * Finally you can add the license to the whitelist or blacklist as needed
 
+This project relies heavily on [pivotal/LicenseFinder](https://github.com/pivotal/LicenseFinder). Be sure to review their docs as well.
+
 ## Status
 
 BETA. Working with Ruby/Bundle examples only at the moment.
