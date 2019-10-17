@@ -10,3 +10,7 @@ runs:
   image: 'Dockerfile'
   args:
   - ${{ inputs.package_manager }}
+branding:
+  icon: 'file-text'  
+  color: 'purple'
+  
