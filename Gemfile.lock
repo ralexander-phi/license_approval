@@ -20,6 +20,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bundler
   license_finder
 
 BUNDLED WITH
