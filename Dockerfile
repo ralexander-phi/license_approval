@@ -1,8 +1,5 @@
 FROM ruby:2.6-alpine
 
-# Install JQ
-RUN apk add jq
-
 # Install license_finder
 RUN mkdir -p /var/license_action/
 WORKDIR /var/license_action/

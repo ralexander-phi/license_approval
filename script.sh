@@ -28,11 +28,8 @@ echo "DONE. Got: $REPORT"
 
 # Minimize
 echo "minimize"
-REPORT=$(echo $REPORT | sed 's/.*{/{/' | jq -c)
+REPORT=$(echo $REPORT | sed 's/[^{]*{/{/' | base64 | tr -d '\n')
 echo "Done. Got: $REPORT"
-
-# base64
-REPORT=$(echo $REPORT | base64 | tr -d '\n')
 
 # set it for Github Actions to read as an output
 echo ::set-output name=license_report_json::$REPORT
