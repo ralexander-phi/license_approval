@@ -1,8 +1,7 @@
-FROM ruby:2.6-buster
+FROM ruby:2.6-alpine
 
 # Install JQ
-RUN apt update
-RUN apt install jq -y
+RUN apk add jq
 
 # Install license_finder
 RUN mkdir -p /var/license_action/
