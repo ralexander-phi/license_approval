@@ -2,7 +2,7 @@ FROM ruby:2.6-buster
 
 # Install JQ
 RUN apt update
-RUN apt install jq
+RUN apt install jq -y
 
 # Install license_finder
 RUN mkdir -p /var/license_action/
