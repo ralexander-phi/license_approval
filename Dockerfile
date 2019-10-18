@@ -1,7 +1,7 @@
-FROM ruby:2.6-alpine
+FROM ruby:2.6-ubuntu
 
 # Install JQ
-RUN apk add jq
+RUN apt-get install jq
 
 # Install license_finder
 RUN mkdir -p /var/license_action/
