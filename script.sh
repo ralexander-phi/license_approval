@@ -1,12 +1,6 @@
 #!/bin/sh
 
 cd "$GITHUB_WORKSPACE"
+REPORT=$(license_finder report --format json)
 
-echo "$INPUT_PACKAGE_MANAGER"
-
-# need to install dependencies
-bundle
-
-# check the dependencies
-license_finder
-
+echo ::set-output name=license_report_json::$REPORT
