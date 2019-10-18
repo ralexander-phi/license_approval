@@ -1,4 +1,4 @@
-FROM ruby:2.6-ubuntu
+FROM ruby:2.6-stretch
 
 # Install JQ
 RUN apt-get install jq
