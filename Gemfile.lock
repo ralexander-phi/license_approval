@@ -6,7 +6,7 @@ GEM
       rubyzip
       thor
       toml (= 0.2.0)
-      with_env (= 1.1.0)
+      with_env (= 2.1.0)
       xml-simple
     parslet (1.8.2)
     rubyzip (2.0.0)
@@ -20,7 +20,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bundler
   license_finder
 
 BUNDLED WITH
