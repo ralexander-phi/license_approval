@@ -24,8 +24,12 @@ if [ "$?" -ne 0 ]; then
 	exit 1
 fi
 
+echo "DONE. Got: $REPORT"
+
 # Minimize
+echo "minimize"
 REPORT=$(echo $REPORT | sed 's/.*{/{/' | jq -c)
+echo "Done. Got: $REPORT"
 
 # set it for Github Actions to read as an output
 echo ::set-output name=license_report_json::$REPORT
