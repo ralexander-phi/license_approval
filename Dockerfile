@@ -1,4 +1,7 @@
-FROM ruby:2.6-alpine
+FROM ruby:2.6-buster
+
+# Some basic tools we may need for building
+RUN apt install git -y
 
 # Install license_finder
 RUN mkdir -p /var/license_action/
