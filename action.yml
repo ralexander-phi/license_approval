@@ -11,6 +11,8 @@ inputs:
 runs:
   using: 'docker'
   image: 'Dockerfile'
+  args:
+  - ${{ inputs.package_manager }}
 branding:
   icon: 'file-text'  
   color: 'purple'
