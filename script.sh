@@ -32,5 +32,5 @@ REPORT=$(echo $REPORT | sed 's/[^{]*{/{/' | base64 | tr -d '\n')
 echo "Done. Got: $REPORT"
 
 # set it for Github Actions to read as an output
-echo "##[set-output name=license_report_json]$REPORT"
+echo "##[set-output name=license_report_json;]$REPORT"
 
