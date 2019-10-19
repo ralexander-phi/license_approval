@@ -18,8 +18,8 @@ bundle install
 REPORT=$(license_finder report --format json)
 if [ "$?" -ne 0 ]; then
     echo "Could not run the report tool!"
-	echo "$REPORT"
-	exit 1
+    echo "$REPORT"
+    exit 1
 fi
 
 #
