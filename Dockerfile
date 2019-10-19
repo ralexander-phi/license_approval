@@ -1,7 +1,8 @@
 FROM licensefinder/license_finder
 
-# Link to the checked out code
-RUN ln -s /scan /github/workspace
+RUN mkdir -p /var/license_action/
+WORKDIR /var/license_action/
+COPY script.sh script.sh
 
-CMD cd /scan && license_finder
+ENTRYPOINT ["/var/license_action/script.sh"]
 
