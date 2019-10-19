@@ -3,8 +3,6 @@ description: 'Check if any license in use require approval'
 outputs:
   license_report_json:
     description: "A report about licenses in JSON"
-  debug:
-    description: "Some debugging info"
 runs:
   using: 'docker'
   image: 'Dockerfile'
