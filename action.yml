@@ -3,6 +3,11 @@ description: 'Check if any license in use require approval'
 outputs:
   license_report_json:
     description: "A report about licenses in JSON"
+inputs:
+  package_manager:
+    description: 'Which package manager to check (comma separated)'
+    required: true
+    default: 'bundler'
 runs:
   using: 'docker'
   image: 'Dockerfile'
