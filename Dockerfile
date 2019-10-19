@@ -1,16 +1,7 @@
-FROM ruby:2.6-buster
+FROM licensefinder/license_finder
 
-# Some basic tools we may need for building
-RUN apt install git -y
+# Link to the checked out code
+RUN ln -s /scan /github/workspace
 
-# Install license_finder
-RUN mkdir -p /var/license_action/
-WORKDIR /var/license_action/
-COPY Gemfile Gemfile
-COPY Gemfile.lock Gemfile.lock
-RUN bundle install --system
-
-COPY script.sh script.sh
-
-ENTRYPOINT ["/var/license_action/script.sh"]
+CMD cd /scan && license_finder
 
