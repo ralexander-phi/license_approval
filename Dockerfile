@@ -1,4 +1,4 @@
-FROM ruby:2.6-alpine
+FROM ruby:2.7-alpine
 
 # Install license_finder
 RUN mkdir -p /var/license_action/
