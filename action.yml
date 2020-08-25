@@ -1,4 +1,4 @@
-name: 'License Approval'
+name: 'LicenseFinder Action'
 description: 'Check if any license in use require approval'
 outputs:
   license_report_json:
