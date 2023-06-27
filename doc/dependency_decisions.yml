@@ -1,11 +1,11 @@
 ---
-- - :whitelist
+- - :permit
   - MIT
   - :who: 
     :why: 
     :versions: []
     :when: 2019-10-16 22:35:40.576173726 Z
-- - :whitelist
+- - :permit
   - Simplified BSD
   - :who: 
     :why: 
