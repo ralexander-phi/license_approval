@@ -8,11 +8,16 @@ inputs:
     description: 'Which package manager to check (comma separated)'
     required: true
     default: 'bundler'
+  working_directory:
+    default: '/'
+    description: "Which directory to check"
+    required: false
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-  - ${{ inputs.package_manager }}
+    - ${{ inputs.package_manager }}
+    - ${{ inputs.working_directory }}
 branding:
-  icon: 'file-text'  
+  icon: 'file-text'
   color: 'purple'

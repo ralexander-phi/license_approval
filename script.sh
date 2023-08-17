@@ -1,6 +1,10 @@
 #!/bin/sh
 
 cd "$GITHUB_WORKSPACE"
+env
+pwd
+echo $1
+echo $2
 
 if [ -f Gemfile.lock ]; then
 	# Install matching bundler version for max compatibility
