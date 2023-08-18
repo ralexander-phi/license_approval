@@ -1,6 +1,8 @@
 #!/bin/sh
 
-cd "$GITHUB_WORKSPACE"
+WORKSPACE=`echo "$GITHUB_WORKSPACE/$2" | sed -e 's,//,/,g'`
+
+cd "$WORKSPACE"
 
 if [ -f Gemfile.lock ]; then
 	# Install matching bundler version for max compatibility
@@ -24,4 +26,3 @@ if [ "$?" -ne 0 ]; then
 fi
 
 license_finder
-
