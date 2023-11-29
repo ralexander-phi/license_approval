@@ -17,12 +17,16 @@ if [ -f Gemfile.lock ]; then
 	fi
 fi
 
-# Make sure dependencies are installed
-bundle install
-if [ "$?" -ne 0 ]; then
-	echo "Failed to install dependencies"
-	echo "Try to pre-install these before calling this action"
-	exit 1
+PACKAGE_MANAGER="${1}"
+
+if [ "${PACKAGE_MANAGER}" == "bundler" ]; then
+	# Make sure dependencies are installed
+	bundle install
+	if [ "$?" -ne 0 ]; then
+		echo "Failed to install dependencies"
+		echo "Try to pre-install these before calling this action"
+		exit 1
+	fi
 fi
 
 license_finder
