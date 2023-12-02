@@ -25,9 +25,11 @@ runs:
       with:
         ruby-version: ${{ inputs.ruby_version }}
     - name: Install license_finder
+      shell: sh
       run: gem install license_finder --version ${{ inputs.license_finder_version }}
     - name: Check licenses
       working-directory: ${{ inputs.working_directory }}
+      shell: sh
       run: license_finder ${{ inputs.extra_flags }}
 branding:
   icon: 'file-text'

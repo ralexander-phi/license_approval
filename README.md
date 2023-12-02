@@ -54,9 +54,7 @@ If you don't want to fully approve a license you can approve packages individual
 
     license_finder approvals add xml-simple
 
-Now take a look at the `doc/dependency_decisions.yml` that these commands created. You'll need to add this to source control, so `git add` it.
-
-Once you've approved everything you need, you can turn on the workflow by adding a file under `.github/workflows`. See the example this repo uses: https://github.com/ralexander-phi/license_approval/blob/master/.github/workflows/main.yml
+Once you've approved everything you need, you can turn on the workflow by adding a file under `.github/workflows`. See examples: https://github.com/ralexander-phi/license_approval_testing/blob/master/.github/workflows/
 
 Tweak your workflow if needed, then start a pull request with the changes. If everything is working, you should see a new check in the pull request and it should be passing. If so, congratulations, you're done.
 
