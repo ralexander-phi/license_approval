@@ -67,5 +67,5 @@ Early versions of this action worked only for ruby and handled installation out-
 Version 1.0 adds support for other package managers but requires the user install their own dependencies.
 If you'd like to continue using the old action, pin to the old code instead of `main`.
 
-    - uses: ralexander-phi/license_approval@f99ca157f08add11854469b84e1a04c952a8d4aa
+    - uses: ralexander-phi/license_approval@v0.0.2
 
