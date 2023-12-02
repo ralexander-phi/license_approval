@@ -10,11 +10,8 @@ How it works:
 * Your team can review the license or consult with your legal team to determine if the license is acceptable
 * Finally you can add the license to the permitted list or restricted list as needed.
 
-This project relies heavily on [pivotal/LicenseFinder](https://github.com/pivotal/LicenseFinder). Be sure to review their docs as well.
+This project is a wrapper around [pivotal/LicenseFinder](https://github.com/pivotal/LicenseFinder). Be sure to review their docs as well.
 
-## Status
-
-BETA. Working with Ruby/Bundle examples only at the moment.
 
 ## Setup
 
@@ -46,19 +43,29 @@ This indicates that the tool doesn't know if the `MIT`, `Simplified BSD`, and `r
 
 You can mark the MIT license as acceptable by running:
 
-    license_finder permitted_licenses add MIT
+    $ license_finder permitted_licenses add MIT
 
 Now any `MIT` licensed dependencies will automatically be approved.
 
 If you don't want to fully approve a license you can approve packages individually as well:
 
-    license_finder approvals add xml-simple
+    $ license_finder approvals add xml-simple
 
-Once you've approved everything you need, you can turn on the workflow by adding a file under `.github/workflows`. See examples: https://github.com/ralexander-phi/license_approval_testing/blob/master/.github/workflows/
+Once you've approved everything you need, you can turn on the workflow by adding a file under `.github/workflows`.
+See examples: https://github.com/ralexander-phi/license_approval_testing/blob/master/.github/workflows/
+Be sure to install your dependencies before running the `license_approval` step.
 
 Tweak your workflow if needed, then start a pull request with the changes. If everything is working, you should see a new check in the pull request and it should be passing. If so, congratulations, you're done.
 
 Now your team will be able to keep track of software licensing approvals right in your pull request workflow.
 
 Feel free to open an issue if you run into any issues or have suggestions for improvements.
+
+## Breaking Changes
+
+Early versions of this action worked only for ruby and handled installation out-of-the-box.
+Version 1.0 adds support for other package managers but requires the user install their own dependencies.
+If you'd like to continue using the old action, pin to the old code instead of `main`.
+
+    - uses: ralexander-phi/license_approval@f99ca157f08add11854469b84e1a04c952a8d4aa
 
