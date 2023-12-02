@@ -1,23 +1,35 @@
 name: 'License Approval'
-description: 'Check if any license in use require approval'
-outputs:
-  license_report_json:
-    description: "A report about licenses in JSON"
+description: 'Check if any license in use requires approval'
 inputs:
-  package_manager:
-    description: 'Which package manager to check (comma separated)'
-    required: true
-    default: 'bundler'
   working_directory:
-    default: '/'
     description: "Which directory to check"
     required: false
+    default: '/'
+  license_finder_version:
+    description: "The version of license_finder to install"
+    required: false
+    default: '7.1.0'
+  extra_flags:
+    description: 'Additional command line flags and arguments to pass to license_finder'
+    required: false
+    default: ''
+  ruby_version:
+    description: 'The version of Ruby to use'
+    required: false
+    default: 'ruby-3.2'
 runs:
-  using: 'docker'
-  image: 'Dockerfile'
-  args:
-    - ${{ inputs.package_manager }}
-    - ${{ inputs.working_directory }}
+  using: 'composite'
+  steps:
+    - name: Install ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: ${{ inputs.ruby_version }}
+    - name: Install license_finder
+      run: gem install license_finder --version ${{ inputs.license_finder_version }}
+    - name: Check licenses
+      working-directory: ${{ inputs.working_directory }}
+      run: license_finder ${{ inputs.extra_flags }}
 branding:
   icon: 'file-text'
   color: 'purple'
+
